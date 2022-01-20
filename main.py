@@ -1,6 +1,6 @@
 print("hello")
 print("covid is spreading")
-#we deal 4 topics in pytest
+# we deal 4 topics in pytest
 # 1.test case - one condition and one outcome
 # 2.test suite - group of test cases
 # 3.Fixtures - condition or method which is executed before or after the test case
@@ -13,4 +13,17 @@ print("covid is spreading")
 #                       3.Yeild - for successful completion of test case yeild is used for notification
 #                       4.Mark - used for parameterized testing
 # Decorators - annotations(@Fixture)
-#smaple program for pytest fixture
+# smaple program for pytest fixture
+balance = 5000
+
+
+def withdraw(amount):
+    global balance
+    balance -= amount
+    return balance
+
+
+def deposit(amount):
+    global balance
+    balance += amount
+    return balance
